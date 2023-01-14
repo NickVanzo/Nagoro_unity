@@ -14,6 +14,7 @@ public class ItemPickupHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera = GameObject.Find("MainCamera").GetComponent<Camera>();
         pickupLayerMask = LayerMask.GetMask("Pickup");
     }
     
