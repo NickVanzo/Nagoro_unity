@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5cd78b91c1a14497be9b670e47f5222, type: 3}
+  m_Name: InvenotryItem_Shotgun
+  m_EditorClassIdentifier: 
+  id: 0
+  displayName: Shotgun
+  icon: {fileID: 0}
+  prefab: {fileID: 341954964129895211, guid: 0c7545612b2f142fa8d501cc53a047eb, type: 3}

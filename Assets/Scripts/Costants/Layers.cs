@@ -1,0 +1,11 @@
+enum Layers {
+    DEFAULT,
+    TRANSPARENT_FX,
+    IGNORE_RAYCAST,
+    PICKUP,
+    WATER,
+    UI,
+    CONCRETE,
+    CHARACTER,
+    GROUND
+}
