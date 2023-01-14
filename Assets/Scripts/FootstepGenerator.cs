@@ -23,6 +23,7 @@ namespace StarterAssets
         {
             fspController = GetComponent<FirstPersonController>();
             playerRB = GetComponent<Rigidbody>();
+            
         }
 
         void Update()

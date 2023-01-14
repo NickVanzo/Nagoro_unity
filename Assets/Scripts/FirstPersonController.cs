@@ -86,6 +86,7 @@ namespace StarterAssets
             }
         }
 
+
         private void Awake()
         {
             // get a reference to our main camera
@@ -112,9 +113,9 @@ namespace StarterAssets
 
         private void Update()
         {
+            Move();
             JumpAndGravity();
             GroundedCheck();
-            Move();
         }
 
         private void LateUpdate()
@@ -272,7 +273,7 @@ namespace StarterAssets
 
         public bool IsSprinting()
         {
-			return _input.sprint;
+            return _input.sprint;
         }
     }
 }
