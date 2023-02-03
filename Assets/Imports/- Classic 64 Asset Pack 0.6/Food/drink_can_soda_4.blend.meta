@@ -3,7 +3,12 @@ guid: 81235797c45414bd39b77b73b914efd7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Drink_Can_Soda_4
+    second: {fileID: 2100000, guid: c6967c8c8b2e746d4a6dbaac94d2588c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
