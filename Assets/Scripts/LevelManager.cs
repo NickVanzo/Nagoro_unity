@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI firstTitle = null;
     [SerializeField] private SoundManager soundManager = null;
     [SerializeField] private TextMeshProUGUI secondTitle = null;
+    [SerializeField] private GameObject cameraCanvas = null;
     [SerializeField] private float startingScreenDuration = 4f;
     [SerializeField] private float durationOfEachTitle = 2f;
     public static event Action OnSceneEnded;
@@ -20,6 +21,7 @@ public class LevelManager : MonoBehaviour
         secondTitle.gameObject.SetActive(false);
         StartCoroutine(nameof(ShowTitle));
         StartCoroutine(nameof(WaitAndHideBlackScreen));
+        cameraCanvas.gameObject.SetActive(true);
     }
 
     IEnumerator WaitAndHideBlackScreen()
