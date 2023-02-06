@@ -6,15 +6,22 @@ public class BackgroundAudioHandler : MonoBehaviour
 {
     [SerializeField] LevelManager levelManager;
     [SerializeField] AudioSource audioSource;
+
     void Start()
     {
         audioSource.playOnAwake = false;
         audioSource.loop = true;
-        LevelManager.OnSceneEnded += StartAudioClip;
+        UIManager.OnSceneEnded += StartAudioClip;
+        UIManager.OnEnterPause += StopAudioClip;
+        UIManager.OnQuitPause += StartAudioClip;
     }
 
     void StartAudioClip()
     {
         audioSource.Play();
+    }
+
+    void StopAudioClip() {
+        audioSource.Pause();
     }
 }

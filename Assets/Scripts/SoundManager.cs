@@ -12,7 +12,7 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-        LevelManager.OnSceneEnded += StartCarEngineLoopClip;
+        UIManager.OnSceneEnded += StartCarEngineLoopClip;
     }
 
     public void PlayDrumClip()

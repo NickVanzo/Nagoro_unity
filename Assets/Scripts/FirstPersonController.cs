@@ -59,6 +59,7 @@ namespace StarterAssets
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
+        private bool blockRotation = false;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -98,6 +99,8 @@ namespace StarterAssets
 
         private void Start()
         {
+            UIManager.OnEnterPause += BlockRotation;
+            UIManager.OnQuitPause += UnblockRotation;
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -133,7 +136,7 @@ namespace StarterAssets
         private void CameraRotation()
         {
             // if there is an input
-            if (_input.look.sqrMagnitude >= _threshold)
+            if (_input.look.sqrMagnitude >= _threshold && !blockRotation)
             {
                 //Don't multiply mouse input by Time.deltaTime
                 float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
@@ -274,6 +277,16 @@ namespace StarterAssets
         public bool IsSprinting()
         {
             return _input.sprint;
+        }
+
+        public void BlockRotation()
+        {
+            blockRotation = true;
+        }
+
+        public void UnblockRotation()
+        {
+            blockRotation = false;
         }
     }
 }
